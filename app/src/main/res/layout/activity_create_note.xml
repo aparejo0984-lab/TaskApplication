@@ -30,7 +30,7 @@
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:tint="@color/colorWhiteTextColor" />
+                app:tint="@color/colorAccent" />
 
             <ImageView
                 android:id="@+id/imageSave"
@@ -44,14 +44,14 @@
                 app:layout_constraintBottom_toBottomOf="@id/imageBack"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/imageBack"
-                app:tint="@color/colorWhiteTextColor" />
+                app:tint="@color/colorAccent" />
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_35sdp"
                 android:id="@+id/status"
                 android:src="@drawable/ic_done"
-                app:tint="@color/colorWhiteTextColor"
+                app:tint="@color/colorAccent"
                 app:layout_constraintEnd_toStartOf="@id/imageSave"
                 app:layout_constraintBottom_toBottomOf="@id/imageBack"
                 app:layout_constraintTop_toTopOf="@id/imageBack"

@@ -16,6 +16,6 @@
     <string name="layout_miscellaneous_text_miscellaneous_text">MORE ACTIONS</string>
     <string name="layout_miscellaneous_text_pick_color_text">Pick Category</string>
     <string name="layout_miscellaneous_text_add_image_text">Add Image</string>
-    <string name="layout_miscellaneous_text_add_url_text">Add URL</string>
+    <string name="layout_miscellaneous_text_add_url_text">View Map</string>
     <string name="layout_miscellaneous_text_delete_note_text">Delete Note</string>
 </resources>

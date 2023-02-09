@@ -76,7 +76,6 @@ public class CreateNoteActivity extends AppCompatActivity {
         status = findViewById(R.id.status);
         status.setOnClickListener(v -> saveNote(true));
 
-
         selectedNoteColor = "#333333";
         selectedImagePath = "";
 
@@ -174,6 +173,8 @@ public class CreateNoteActivity extends AppCompatActivity {
         if (status) {
             note.setStatus("completed");
             Toast.makeText(this, "Completed Note", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Note is modified", Toast.LENGTH_SHORT).show();
         }
 
         if (layoutWebURL.getVisibility() == View.VISIBLE) {
@@ -318,11 +319,13 @@ public class CreateNoteActivity extends AppCompatActivity {
         });
 
         if(alreadyAvailableNote != null) {
-            layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setVisibility(View.VISIBLE);
-            layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setOnClickListener(v -> {
-                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                showDeleteNoteDialog();
-            });
+            if (alreadyAvailableNote.getStatus() == null ){
+                layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setVisibility(View.VISIBLE);
+                layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setOnClickListener(v -> {
+                    bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                    showDeleteNoteDialog();
+                });
+            }
         }
     }
 

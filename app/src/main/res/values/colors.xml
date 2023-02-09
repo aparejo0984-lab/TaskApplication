@@ -19,6 +19,7 @@
     <color name="colorDefaultNoteColor">#333333</color>
     <color name="colorNoteSubtitleText">#FAFAFA</color>
     <color name="colorMiscellaneousBackground">#1F1F1F</color>
+    <color name="peach">#FF6F5E</color>
 
     <color name="colorNoteColor2">#FDBE3B</color>
     <color name="colorNoteColor3">#FF4842</color>

@@ -10,21 +10,13 @@
     app:layout_constraintBottom_toBottomOf="parent">
 
     <ImageView
-        android:id="@+id/imageAddNote"
-        android:layout_width="@dimen/_23sdp"
-        android:layout_height="@dimen/_23sdp"
-        android:contentDescription="@string/app_name"
-        android:src="@drawable/ic_add_outline"
-        app:tint="@color/colorWhiteTextColor" />
-
-    <ImageView
         android:id="@+id/imageSortUP"
         android:layout_width="@dimen/_23sdp"
         android:layout_height="@dimen/_23sdp"
         android:layout_marginStart="@dimen/_15sdp"
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/arrow_up_float"
-        app:tint="@color/colorWhiteTextColor" />
+        app:tint="@color/colorAccent" />
 
     <ImageView
         android:id="@+id/imageSortDown"
@@ -33,6 +25,6 @@
         android:layout_marginStart="@dimen/_15sdp"
         android:contentDescription="@string/app_name"
         android:src="@android:drawable/arrow_down_float"
-        app:tint="@color/colorWhiteTextColor" />
+        app:tint="@color/colorAccent" />
 
 </LinearLayout>

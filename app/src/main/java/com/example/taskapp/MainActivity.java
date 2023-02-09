@@ -2,19 +2,14 @@ package com.example.taskapp;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -22,9 +17,6 @@ import android.os.Looper;
 import android.provider.MediaStore;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Patterns;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -48,7 +40,6 @@ public class MainActivity extends AppCompatActivity implements NoteListener {
 
     private int noteClickedPosition = -1;
 
-    private AlertDialog dialogAddURL;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,9 +81,6 @@ public class MainActivity extends AppCompatActivity implements NoteListener {
             }
         });
 
-        findViewById(R.id.imageAddNote).setOnClickListener(v -> startActivityForResult(
-                new Intent(getApplicationContext(), CreateNoteActivity.class),Constants.REQUEST_CODE_ADD_NOTE
-        ));
 
         findViewById(R.id.imageSortUP).setOnClickListener(v -> {
             recyclerView = findViewById(R.id.notesRecyclerView);
