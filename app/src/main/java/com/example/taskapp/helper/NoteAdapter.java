@@ -91,13 +91,6 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
             } else {
                 gradientDrawable.setColor(Color.parseColor("#333333"));
             }
-
-            if(note.getImagePath() != null) {
-                imageNote.setImageBitmap(BitmapFactory.decodeFile(note.getImagePath()));
-                imageNote.setVisibility(View.VISIBLE);
-            } else {
-                imageNote.setVisibility(View.GONE);
-            }
         }
     }
 
@@ -112,8 +105,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
                     ArrayList<Note> temp = new ArrayList<>();
                     for(Note note : notesSource) {
                         if(note.getTitle().toLowerCase().contains(searchKeyword.toLowerCase()) ||
-                                note.getSubtitle().toLowerCase().contains(searchKeyword.toLowerCase()) ||
-                                note.getNoteText().toLowerCase().contains(searchKeyword.toLowerCase())) {
+                                note.getSubtitle().toLowerCase().contains(searchKeyword.toLowerCase())) {
                             temp.add(note);
                         }
                     }

@@ -123,7 +123,6 @@ public class CreateNoteActivity extends AppCompatActivity {
         imageNote = findViewById(R.id.imageNote);
         textWebURL = findViewById(R.id.textWebURL);
         layoutWebURL = findViewById(R.id.layoutWebURL);
-
     }
 
     private void setViewOrUpdateNote() {
@@ -171,9 +170,10 @@ public class CreateNoteActivity extends AppCompatActivity {
         note.setImagePath(selectedImagePath);
 
         if (status) {
-            note.setStatus("completed");
+            note.setStatus("complete");
             Toast.makeText(this, "Completed Note", Toast.LENGTH_SHORT).show();
         } else {
+            note.setStatus("incomplete");
             Toast.makeText(this, "Note is modified", Toast.LENGTH_SHORT).show();
         }
 
@@ -314,18 +314,16 @@ public class CreateNoteActivity extends AppCompatActivity {
         });
 
         layoutMiscellaneous.findViewById(R.id.layoutAddURL).setOnClickListener(v -> {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-            showAddURLDialog();
+            Intent intent = new Intent(getApplicationContext(), MapActivity.class);
+            startActivity(intent);
         });
 
         if(alreadyAvailableNote != null) {
-            if (alreadyAvailableNote.getStatus() == null ){
-                layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setVisibility(View.VISIBLE);
-                layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setOnClickListener(v -> {
-                    bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
-                    showDeleteNoteDialog();
-                });
-            }
+            layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setVisibility(View.VISIBLE);
+            layoutMiscellaneous.findViewById(R.id.layoutDeleteNote).setOnClickListener(v -> {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+                showDeleteNoteDialog();
+            });
         }
     }
 

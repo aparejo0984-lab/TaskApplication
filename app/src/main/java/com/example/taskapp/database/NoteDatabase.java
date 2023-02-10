@@ -1,6 +1,5 @@
 package com.example.taskapp.database;
 
-
 import android.content.Context;
 
 import androidx.room.Database;
